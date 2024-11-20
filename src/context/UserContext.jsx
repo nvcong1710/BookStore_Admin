@@ -14,13 +14,24 @@ const UserProvider = ({ children }) => {
     }
   }, [user.auth]);
   const login = (user) => {
+    const userRole = user.roles && user.roles.length > 0 ? user.roles[0] : "";
     setUser({
       id: user.id,
       userName: user.username,
       token: user.token,
       auth: true,
+      role: userRole,
     });
-    sessionStorage.setItem("user", JSON.stringify({ id: user.id, userName: user.username, token: user.token, auth: true }));
+    sessionStorage.setItem(
+      "user",
+      JSON.stringify({
+        id: user.id,
+        userName: user.username,
+        token: user.token,
+        auth: true,
+        role: userRole,
+      })
+    );
   };
 
   const logout = () => {

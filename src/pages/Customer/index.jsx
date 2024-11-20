@@ -12,12 +12,10 @@ function Customer() {
       fetch("http://localhost:8080/auth/getalltaikhoan")
         .then((response) => response.json())
         .then((data) => {
-          // Lọc các tài khoản có role khác admin
-          const filteredCustomers = data.filter(customer => customer.role !== 'admin');
+          const filteredCustomers = data.filter(customer => customer.roles[0].name !== 'ROLE_ADMIN');
           setCustomers(filteredCustomers);
 
-          // Lọc các tài khoản có role là admin
-          const filteredAdmins = data.filter(admin => admin.role === 'admin');
+          const filteredAdmins = data.filter(admin => admin.roles[0].name === 'ROLE_ADMIN');
           setAdmins(filteredAdmins);
         });
     }
