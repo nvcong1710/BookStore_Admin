@@ -1,17 +1,16 @@
 import { useState, useEffect } from "react";
 import DataTable from "../../components/DataTable";
 function Category() {
-  const [products, setProducts] = useState([]);
+  const [category, setCategory] = useState([]);
 
   useEffect(() => {
     async function fetchProducts() {
-      fetch("http://localhost:8080/api/danhmuc/getalldanhmuc")
+      await fetch("http://localhost:8080/api/danhmuc/getalldanhmuc")
         .then((response) => {
           return response.json();
         })
         .then((data) => {
-          console.log(data);
-          setProducts(data);
+          setCategory(data);
         });
     }
     fetchProducts();
@@ -79,7 +78,53 @@ function Category() {
             </div>
           </div>
 
-          <DataTable data={products} headers={productHeaders} />
+          {/* <DataTable data={products} headers={productHeaders} /> */}
+
+          <div className="px-4 py-5 -mx-4 -my-5">
+            <table className="min-w-full">
+              <thead className="border-t">
+                <tr>
+                  <th
+                    scope="col"
+                    className="px-3 py-4"
+                  >
+                    ID
+                  </th>
+                  <th
+                    scope="col"
+                    className="px-3 py-4"
+                  >
+                    Tên danh mục
+                  </th>
+                  <th
+                    scope="col"
+                    className="px-3 py-4"
+                  >
+                    Số lượng sách
+                  </th>
+                </tr>
+              </thead>
+              <tbody className="divide-y">
+                {category.map((category, index) => (
+                  <tr
+                    key={index}
+                    className="h-12"
+                  >
+                    <td
+                      className="px-3 py-4 text-center">
+                      {category.id}
+                    </td>
+                    <td className="px-3 py-4">
+                      {category.tenDanhMuc}
+                    </td>
+                    <td className="px-3 py-4 text-center">
+                      {category.soLuongSach}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
     </div>

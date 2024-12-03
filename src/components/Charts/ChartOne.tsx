@@ -49,10 +49,6 @@ const options: ApexOptions = {
     width: [2, 2],
     curve: "straight",
   },
-  // labels: {
-  //   show: false,
-  //   position: "top",
-  // },
   grid: {
     xaxis: {
       lines: {
@@ -119,7 +115,7 @@ const options: ApexOptions = {
 const ChartOne = () => {
   const [state, setState] = useState({ series: [] });
   const user = useContext(UserContext);
-  useEffect(() => { 
+  useEffect(() => {
     fetch("http://localhost:8080/api/dashboard/doanh_thu_theo_thang", {
       headers: {
         "Content-Type": "application/json",
