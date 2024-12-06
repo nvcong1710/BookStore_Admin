@@ -2,7 +2,7 @@ import Author from "../pages/Author";
 import Category from "../pages/Category";
 import Customer from "../pages/Customer";
 import Dashboard from "../pages/Dashboard";
-import DetailCategory from "../pages/DetailCategory";
+import DetailCategory from "../pages/Category/DetailCategory";
 import DetailProduct from "../pages/DetailProduct";
 import Order from "../pages/Order";
 import Product from "../pages/Product";
@@ -12,7 +12,7 @@ import FullLayout from "../layouts/FullLayout";
 import AddProductForm from "../pages/Product/AddProductForm";
 import CreateTacGia from "../pages/Author/CreateTacGia";
 import AddCategory from "../pages/AddCategory";
-import DetailAuthor from "../pages/DetailAuthor";
+import DetailAuthor from "../pages/Author/DetailAuthor";
 
 // Public routes
 const publicRoutes = [
@@ -88,7 +88,7 @@ const publicRoutes = [
     path: "/danh-muc/:categoryId",
     component: DetailCategory,
     props: {
-      heading: "Sản phẩm",
+      heading: "Danh mục",
     },
   },
   {

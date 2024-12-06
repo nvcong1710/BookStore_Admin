@@ -18,10 +18,10 @@ function Sidebar() {
                 <li>
                   <a
                     href="/"
-                    className="group flex gap-x-3 rounded-md p-4 text-base leading-6 font-semibold text-slate-700 hover:text-sky-600 hover:bg-gray-50"
+                    className="group flex gap-x-3 rounded-md p-4 text-base leading-6 font-semibold hover:text-sky-600 hover:bg-gray-50"
                   >
                     <svg
-                      className="h-6 w-6 shrink-0 text-slate-400 group-hover:text-sky-600"
+                      className="h-6 w-6 shrink-0 group-hover:text-sky-600"
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
                       viewBox="0 0 24 24"
@@ -41,10 +41,10 @@ function Sidebar() {
                 <li>
                   <a
                     href="/don-hang"
-                    className="group flex gap-x-3 rounded-md p-4 text-base leading-6 font-semibold text-slate-700 hover:text-sky-600 hover:bg-gray-50 "
+                    className="group flex gap-x-3 rounded-md p-4 text-base leading-6 font-semibold  hover:text-sky-600 hover:bg-gray-50 "
                   >
                     <svg
-                      className="h-6 w-6 shrink-0 text-slate-400 group-hover:text-sky-600"
+                      className="h-6 w-6 shrink-0  group-hover:text-sky-600"
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
                       viewBox="0 0 24 24"
@@ -64,10 +64,10 @@ function Sidebar() {
                 <li>
                   <a
                     href="/san-pham"
-                    className="group flex gap-x-3 rounded-md p-4 text-base leading-6 font-semibold text-slate-700 hover:text-sky-600 hover:bg-gray-50 "
+                    className="group flex gap-x-3 rounded-md p-4 text-base leading-6 font-semibold  hover:text-sky-600 hover:bg-gray-50 "
                   >
                     <svg
-                      className="h-6 w-6 shrink-0 text-slate-400 group-hover:text-sky-600 :text-white :bg-slate-800"
+                      className="h-6 w-6 shrink-0 group-hover:text-sky-600 :text-white :bg-slate-800"
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
                       viewBox="0 0 24 24"
@@ -92,10 +92,10 @@ function Sidebar() {
                 <li>
                   <a
                     href="/tac-gia"
-                    className="group flex gap-x-3 rounded-md p-4 text-base leading-6 font-semibold text-slate-700 hover:text-sky-600 hover:bg-gray-50 "
+                    className="group flex gap-x-3 rounded-md p-4 text-base leading-6 font-semibold  hover:text-sky-600 hover:bg-gray-50 "
                   >
                     <svg
-                      className="h-6 w-6 shrink-0 text-slate-400 group-hover:text-sky-600 :text-white :bg-slate-800"
+                      className="h-6 w-6 shrink-0  group-hover:text-sky-600 :text-white :bg-slate-800"
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 24 24"
                       fill="none"
@@ -115,10 +115,10 @@ function Sidebar() {
                 <li>
                   <a
                     href="/danh-gia"
-                    className="group flex gap-x-3 rounded-md p-4 text-base leading-6 font-semibold text-slate-700 hover:text-sky-600 hover:bg-gray-50 "
+                    className="group flex gap-x-3 rounded-md p-4 text-base leading-6 font-semibold hover:text-sky-600 hover:bg-gray-50 "
                   >
                     <svg
-                      className="h-6 w-6 shrink-0 text-slate-400 group-hover:text-sky-600 :text-white :bg-slate-800"
+                      className="h-6 w-6 shrink-0 group-hover:text-sky-600 :text-white :bg-slate-800"
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
                       viewBox="0 0 24 24"
@@ -138,10 +138,10 @@ function Sidebar() {
                 <li>
                   <a
                     href="/danh-muc"
-                    className="group flex gap-x-3 rounded-md p-4 text-base leading-6 font-semibold text-slate-700 hover:text-sky-600 hover:bg-gray-50 "
+                    className="group flex gap-x-3 rounded-md p-4 text-base leading-6 font-semibold hover:text-sky-600 hover:bg-gray-50 "
                   >
                     <svg
-                      className="h-6 w-6 shrink-0 text-slate-400 group-hover:text-sky-600 :text-white :bg-slate-800"
+                      className="h-6 w-6 shrink-0 group-hover:text-sky-600 :text-white :bg-slate-800"
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
                       viewBox="0 0 24 24"
@@ -161,10 +161,10 @@ function Sidebar() {
                 <li>
                   <a
                     href="/khach-hang"
-                    className="group flex gap-x-3 rounded-md p-4 text-base leading-6 font-semibold text-slate-700 hover:text-sky-600 hover:bg-gray-50 "
+                    className="group flex gap-x-3 rounded-md p-4 text-base leading-6 font-semibold hover:text-sky-600 hover:bg-gray-50 "
                   >
                     <svg
-                      className="h-6 w-6 shrink-0 text-slate-400 group-hover:text-sky-600 :text-white :bg-slate-800"
+                      className="h-6 w-6 shrink-0 group-hover:text-sky-600 :text-white :bg-slate-800"
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
                       viewBox="0 0 24 24"
