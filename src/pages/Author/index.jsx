@@ -42,7 +42,7 @@ function Author() {
         </a>
       </div>
 
-      <div className="p-4 mx-auto  px-6">
+      <div className="p-6">
         <div className="shadow-sm ring-1">
           <div className="relative">
             <div className="absolute inset-y-0 left-0 flex items-center pl-3">
@@ -63,7 +63,7 @@ function Author() {
               </svg>
             </div>
             <input
-              className=" p-2 pl-10 rounded-md"
+              className="p-2 pl-10 rounded-md"
               placeholder="Tìm kiếm tác giả"
               value={searchQuery}
               onChange={handleSearchChange}
@@ -72,7 +72,7 @@ function Author() {
         </div>
 
         <div className="px-4 py-5 -mx-4 -my-5">
-          <table className="min-w-full">
+          <table className="min-w-full border">
             <thead className="border-t">
               <tr>
                 <th

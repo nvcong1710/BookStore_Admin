@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import DataTable from '../../components/DataTable';
 
 function Customer() {
   const [customers, setCustomers] = useState([]);
@@ -41,35 +40,12 @@ function Customer() {
     admin.email.toLowerCase().includes(adminSearchQuery.toLowerCase())
   );
 
-  const customerHeaders = [
-    {
-      label: "ID",
-      className: "relative w-12 px-6 sm:w-16 sm:px-8",
-      render: (item) => item.id,
-    },
-    {
-      label: "Username",
-      className: "px-3 py-4 text-left text-sm font-semibold tracking-wide text-slate-900 whitespace-nowrap",
-      render: (item) => item.username,
-    },
-    {
-      label: "Email",
-      className: "pl-3 pr-4 py-4 text-left text-sm tracking-wide text-slate-900 whitespace-nowrap sm:pr-6",
-      render: (item) => item.email,
-    },
-    {
-      label: "Giới tính",
-      className: "pl-3 pr-4 py-4 text-left text-sm tracking-wide text-slate-900 whitespace-nowrap sm:pr-6",
-      render: (item) => item.gioiTinh,
-    },
-  ];
 
   return (
     <div className="m-8">
       <div className="px-4 sm:flex sm:items-center sm:justify-between sm:px-6 lg:px-8">
-        <div>
-          <h1 className="text-2xl font-medium text-slate-900">Quản lý khách hàng</h1>
-        </div>
+        <h1 className="text-2xl font-medium ">Quản lý khách hàng</h1>
+
         <div className="mt-4 flex sm:mt-0 sm:ml-4">
           <input
             className="appearance-none w-full border border-slate-300 p-2 rounded-md disabled:bg-slate-100 disabled:opacity-50 disabled:cursor-not-allowed"
@@ -81,17 +57,67 @@ function Customer() {
       </div>
 
       <div className="p-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-        <div className="bg-white shadow-sm ring-1 ring-slate-200 rounded-md sm:rounded-lg">
-          <div className="px-4 py-5 sm:px-6">
-            <DataTable data={filteredCustomers} headers={customerHeaders} />
+        <div className="shadow-sm ring-1 ring-slate-200 rounded-md sm:rounded-lg">
+
+          <div className="px-4 -mx-4 -my-5">
+            <table className="min-w-full">
+              <thead className="border-t">
+                <tr>
+                  <th
+                    scope="col"
+                    className="px-3 py-4"
+                  >
+                    ID
+                  </th>
+                  <th
+                    scope="col"
+                    className="px-3 py-4"
+                  >
+                    Username
+                  </th>
+                  <th
+                    scope="col"
+                    className="px-3 py-4"
+                  >
+                    Email
+                  </th>
+                  <th
+                    scope="col"
+                    className="px-3 py-4"
+                  >
+                    Giới tính
+                  </th>
+                </tr>
+              </thead>
+              <tbody className="divide-y">
+                {filteredCustomers.map((admin, index) => (
+                  <tr
+                    key={index}
+                    className="h-12"
+                  >
+                    <td
+                      className="px-3 py-4 text-center">
+                      {admin.id}
+                    </td>
+                    <td className="px-3 py-4">
+                      {admin.username}
+                    </td>
+                    <td className="px-3 py-4 text-center">
+                      {admin.email}
+                    </td>
+                    <td className="px-3 py-4 text-center">
+                      {admin.gioiTinh}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
           </div>
         </div>
       </div>
 
       <div className="px-4 sm:flex sm:items-center sm:justify-between sm:px-6 lg:px-8">
-        <div>
-          <h1 className="text-2xl font-medium text-slate-900">Tài khoản quản trị viên</h1>
-        </div>
+        <h1 className="text-2xl font-medium h-16">Tài khoản quản trị viên</h1>
         <div className="mt-4 flex sm:mt-0 sm:ml-4">
           <input
             className="w-full border p-2 rounded-md disabled:bg-slate-100 disabled:opacity-50 disabled:cursor-not-allowed"
@@ -103,9 +129,61 @@ function Customer() {
       </div>
 
       <div className="p-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-        <div className="bg-white shadow-sm ring-1 ring-slate-200 rounded-md sm:rounded-lg">
-          <div className="px-4 py-5 sm:px-6">
-            <DataTable data={filteredAdmins} headers={customerHeaders} />
+        <div className="shadow-sm ring-1 rounded-md">
+
+          <div className="px-4 -mx-4 -my-5">
+            <table className="min-w-full">
+              <thead className="border-t">
+                <tr>
+                  <th
+                    scope="col"
+                    className="px-3 py-4"
+                  >
+                    ID
+                  </th>
+                  <th
+                    scope="col"
+                    className="px-3 py-4"
+                  >
+                    Username
+                  </th>
+                  <th
+                    scope="col"
+                    className="px-3 py-4"
+                  >
+                    Email
+                  </th>
+                  <th
+                    scope="col"
+                    className="px-3 py-4"
+                  >
+                    Giới tính
+                  </th>
+                </tr>
+              </thead>
+              <tbody className="divide-y">
+                {filteredAdmins.map((admin, index) => (
+                  <tr
+                    key={index}
+                    className="h-12"
+                  >
+                    <td
+                      className="px-3 py-4 text-center">
+                      {admin.id}
+                    </td>
+                    <td className="px-3 py-4">
+                      {admin.username}
+                    </td>
+                    <td className="px-3 py-4 text-center">
+                      {admin.email}
+                    </td>
+                    <td className="px-3 py-4 text-center">
+                      {admin.gioiTinh}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
           </div>
         </div>
       </div>

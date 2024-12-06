@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 function AddCategory() {
-  const [category, setCategory] = useState({tenDanhMuc:""});
+  const [category, setCategory] = useState({ tenDanhMuc: "" });
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -34,7 +34,7 @@ function AddCategory() {
       <div className="m-8">
         <div className="px-4 sm:flex sm:items-center sm:justify-between sm:px-6 lg:px-8">
           <div>
-            <h1 className="text-2xl font-medium text-slate-900">
+            <h1 className="text-2xl font-medium">
               Thêm danh mục
             </h1>
           </div>
@@ -44,16 +44,16 @@ function AddCategory() {
             <div className="col-span-3 xl:col-span-2 space-y-6">
               <div className="bg-white shadow-sm ring-1 ring-slate-200 rounded-md sm:rounded-lg">
                 <div className="px-4 py-5 sm:px-6">
-                  <div className="relative text-slate-500 space-y-4">
+                  <div className="relative space-y-4">
                     <div>
                       <label
-                        className="block font-medium text-base text-slate-700"
+                        className="block font-medium text-base"
                         htmlFor="name"
                       >
                         Tên danh mục
                       </label>
                       <input
-                        className="px-3 py-2 border border-slate-300 rounded-md shadow-sm mt-1 block w-full sm:text-base text-slate-500"
+                        className="px-3 py-2 border border-slate-300 rounded-md shadow-sm mt-1 block w-full"
                         type="text"
                         id="name"
                         placeholder="Nhập tên danh mục"
@@ -72,7 +72,7 @@ function AddCategory() {
                   <div className="flex items-center justify-end">
                     <button
                       onClick={handleSubmit}
-                      className="px-3 py-2 bg-blue-500 rounded-md text-white font-medium hover:bg-blue-600"
+                      className="px-3 py-2 bg-blue-700 rounded-md text-white font-medium hover:bg-blue-700"
                     >
                       Thêm
                     </button>

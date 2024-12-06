@@ -23,7 +23,7 @@ function Pagination() {
 
           <div className="hidden sm:flex-1 sm:flex sm:items-center sm:justify-between">
             <div>
-              <p className="text-sm text-slate-700 leading-5 dark:text-slate-400">
+              <p className="text-sm leading-5">
                 <span>Showing</span>
                 <span className="font-medium">1</span>
                 <span>to</span>

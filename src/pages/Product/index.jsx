@@ -1,5 +1,4 @@
 import { useState, useEffect, useContext } from "react";
-import DataTable from "../../components/DataTable";
 import Axios from "axios";
 import { UserContext } from "../../context/UserContext";
 function Product() {
@@ -22,10 +21,8 @@ function Product() {
       } catch (error) {
         console.error("Error fetching books:", error);
         setProducts([]);
-      } finally {
-        setLoading(false);
       }
-    };
+    }
 
     fetchBooks();
   }, []);
@@ -38,39 +35,10 @@ function Product() {
     product.tieuDe.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
-
-
-  const productHeaders = [
-    {
-      label: "ID",
-      className: "relative text-sm w-12 px-6 sm:w-16 sm:px-8",
-      render: (product) => product.id,
-    },
-    {
-      label: "Tên",
-      className:
-        "px-3 py-4 text-left text-sm tracking-wide text-slate-900 whitespace-nowrap",
-      render: (product) => (
-        <a href={`/san-pham/${product.id}`}>{product.tieuDe}</a>
-      ),
-    },
-    {
-      label: "Trạng thái",
-      className:
-        "px-3 py-4 text-center text-sm tracking-wide text-slate-900 whitespace-nowrap",
-      render: (product) => (product.soLuong > 0 ? "Còn hàng" : "Hết hàng"),
-    },
-    {
-      label: "Số lượng",
-      className:
-        "pl-3 pr-4 py-4 text-left text-sm tracking-wide text-slate-900 whitespace-nowrap sm:pr-6",
-      render: (product) => `${product.soLuong}`,
-    },
-  ];
   return (
     <div className="m-8">
       <div className="px-4 sm:flex sm:items-center sm:justify-between sm:px-6 lg:px-8">
-        <h1 className="text-2xl font-medium text-slate-900">Sản phẩm</h1>
+        <h1 className="text-2xl font-medium">Sản phẩm</h1>
         <a href="/san-pham/them-sp">
           <button className="px-4 py-2 bg-blue-700 text-white rounded-md block w-full order-0 sm:order-1 sm:ml-3">
             Thêm sản phẩm
@@ -117,19 +85,25 @@ function Product() {
               </th>
               <th
                 scope="col"
-                className="px-3 py-4 text-left text-sm tracking-wide text-slate-900 whitespace-nowrap"
+                className="px-3 py-4 text-left text-sm tracking-wide"
               >
                 Tên
               </th>
               <th
                 scope="col"
-                className="px-3 py-4 text-center text-sm tracking-wide text-slate-900 whitespace-nowrap"
+                className="px-3 py-4 text-left text-sm tracking-wide"
+              >
+                Tác giả
+              </th>
+              <th
+                scope="col"
+                className="px-3 py-4 text-center text-sm tracking-wide"
               >
                 Trạng thái
               </th>
               <th
                 scope="col"
-                className="pl-3 pr-4 py-4 text-left text-sm tracking-wide text-slate-900 whitespace-nowrap sm:pr-6"
+                className="pl-3 pr-4 py-4 text-left text-sm tracking-wide sm:pr-6"
               >
                 Số lượng
               </th>
@@ -140,18 +114,23 @@ function Product() {
               <tr
                 key={index}
                 onClick={() => window.location.href = `/san-pham/${product.id}`}
-                className="relative hover:bg-slate-50 cursor-pointer"
+                className=" hover:bg-sky-300 h-12"
               >
                 <td className="relative text-sm w-12 px-6 sm:w-16 sm:px-8">
                   {product.id}
                 </td>
-                <td className="px-3 py-4 text-left text-sm tracking-wide text-slate-900 whitespace-nowrap">
+                <td className="px-3 py-4 text-left text-sm tracking-wide">
                   {product.tieuDe}
                 </td>
-                <td className="px-3 py-4 text-center text-sm tracking-wide text-slate-900 whitespace-nowrap">
+                <td className="px-3 py-4 text-left text-sm tracking-wide">
+                  {product.tacGiaDTO && product.tacGiaDTO.tenTacGia
+                    ? product.tacGiaDTO.tenTacGia
+                    : "Không có tác giả"}
+                </td>
+                <td className="px-3 py-4 text-center text-sm tracking-wide">
                   {product.soLuong > 0 ? "Còn hàng" : "Hết hàng"}
                 </td>
-                <td className="pl-3 pr-4 py-4 text-left text-sm tracking-wide text-slate-900 whitespace-nowrap sm:pr-6">
+                <td className="pl-3 pr-4 py-4 text-left text-sm tracking-wide sm:pr-6">
                   {product.soLuong}
                 </td>
               </tr>
